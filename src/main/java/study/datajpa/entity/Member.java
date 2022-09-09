@@ -11,11 +11,11 @@ import static javax.persistence.FetchType.LAZY;
 @Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @NamedQuery(
-        name="Member.findByUsername",
-        query="select m from Member m where m.username = :username")
+        name = "Member.findByUsername",
+        query = "select m from Member m where m.username = :username")
 @ToString(of = {"id", "username", "age"})
 @NamedEntityGraph(name = "Member.all", attributeNodes = @NamedAttributeNode("team"))
-public class Member {
+public class Member extends BaseEntity {
 
     @Id
     @GeneratedValue

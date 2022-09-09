@@ -255,10 +255,12 @@ class MemberRepositoryTest {
         em.clear();
 
         List<Member> member11 = memberRepository.findLockByUsername("member1");
-        Member findMember = (Member) member11;
-
     }
 
+    @Test
+    void callCustom() {
+        List<Member> result = memberRepository.findMemberCustom();
+    }
 }
 
 
